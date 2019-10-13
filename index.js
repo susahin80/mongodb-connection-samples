@@ -10,30 +10,7 @@ mongodb.initDb((err, mongodb) => {
   if (err) {
     console.log(err);
   } else {
+    console.log("Connected to the db")
     app.listen(3000);
-
-    //console.log(db);
-    //mongodb.db().collection('products').findOne({}).then(doc => console.log(doc));
   }
 });
-
-// const dbUrl = process.env.MONGO_URL;
-// const dbName = process.env.MONGO_DB;
-
-// MongoClient.connect(dbUrl, { useNewUrlParser: true }, (err, client) => {
-//   if (err) throw err;
-
-//   console.log("Connected successfully to Mongodb");
-
-//   const db = client.db(dbName);
-
-//   app.locals.db = db;
-
-//   const port = process.env.PORT || 3001;
-
-//   require("./startup/routes")(app);
-
-//   const server = app.listen(port, () =>
-//     console.log(`Listening on port ${port}...`)
-//   );
-// });
